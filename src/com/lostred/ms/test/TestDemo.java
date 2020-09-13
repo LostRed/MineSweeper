@@ -9,7 +9,7 @@ import java.util.Enumeration;
 
 public class TestDemo {
     public static void main(String[] args) {
-        InitGlobalFont(new Font("Arial", Font.BOLD, 14));
+        initGlobalFont(new Font("Arial", Font.BOLD, 14));
         GameThread gt = new GameThread();
         gt.start();
     }
@@ -19,7 +19,7 @@ public class TestDemo {
      *
      * @param font 字体格式
      */
-    private static void InitGlobalFont(Font font) {
+    private static void initGlobalFont(Font font) {
         FontUIResource fontRes = new FontUIResource(font);
         for (Enumeration<Object> keys = UIManager.getDefaults().keys(); keys.hasMoreElements(); ) {
             Object key = keys.nextElement();
