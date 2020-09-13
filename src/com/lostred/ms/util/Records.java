@@ -19,7 +19,7 @@ public class Records {
     public static String readPropertiesValue(String keyName) {
         Properties pps = new Properties();
         try {
-            InputStream in = new BufferedInputStream(new FileInputStream("config/config.properties"));
+            InputStream in = new BufferedInputStream(new FileInputStream("data/config.properties"));
             pps.load(in);
             return pps.getProperty(keyName);
         } catch (Exception e) {
@@ -37,7 +37,7 @@ public class Records {
     public static void writeProperties(String keyName, String keyValue) {
         Properties pps = new Properties();
         try {
-            InputStream in = new BufferedInputStream(new FileInputStream("config/config.properties"));
+            InputStream in = new BufferedInputStream(new FileInputStream("data/config.properties"));
             pps.load(in);
             Set<Object> keys = pps.keySet();
             Map<Object, Object> toSaveMap = new HashMap<>();
@@ -48,7 +48,7 @@ public class Records {
             }
             toSaveMap.put(keyName, keyValue);
             pps.putAll(toSaveMap);
-            OutputStream out = new FileOutputStream("config/config.properties");
+            OutputStream out = new FileOutputStream("data/config.properties");
             pps.store(out, "Copyright(c) by LostRed");
         } catch (IOException e) {
             e.printStackTrace();
