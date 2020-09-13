@@ -3,7 +3,8 @@ package com.lostred.ms.thread;
 import com.lostred.ms.service.Service;
 import com.lostred.ms.util.Difficulty;
 import com.lostred.ms.util.Records;
-import com.lostred.ms.view.*;
+import com.lostred.ms.view.MainFrame;
+import com.lostred.ms.view.ScoreDialog;
 
 import java.util.Objects;
 
